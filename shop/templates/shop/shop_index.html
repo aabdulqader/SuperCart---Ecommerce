@@ -9,7 +9,8 @@
         <!--carousel indicators starts from here-->
         {% for product, range, num_slide in all_products %}
         <h1 class="my-5">{{product.0.category}}</h1>
-        <div id="demo{{forloop.counter}}" class="carousel slide my-3" data-ride="carousel">
+        <div class="row">
+        <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
             <ul class="carousel-indicators">
                 <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
                 
@@ -47,14 +48,14 @@
     
 
         <!-- left and right controls for the slide -->
-        <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+        <a class="carousel-control-prev" style="padding-top: 222px;" href="#demo{{forloop.counter}}" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+        <a class="carousel-control-next" style="padding-top: 222px;" href="#demo{{forloop.counter}}" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         
-        
+        </div>
         {% endfor %}
 
     </div>

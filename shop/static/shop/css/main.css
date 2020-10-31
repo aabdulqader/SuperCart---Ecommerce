@@ -12,8 +12,8 @@ background-color: blue;
 
 
 .col-md-3 img{
-    max-width: 227px;
-    max-height: 242px;
+    max-width: 195px;
+    max-height: 205px;
 }
 
 
@@ -30,13 +30,16 @@ bottom: 0;
 body .carousel-control-prev-icon,
 body .carousel-control-next-icon{
 background-color: rgb(5, 131, 104);
+
 }
 
 
 .carousel-control-prev,
 .carousel-control-next{
-top: auto;
-bottom: auto;
+    top: auto;
+    bottom: auto;
+
+    
 }
 
 

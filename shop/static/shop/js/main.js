@@ -21,4 +21,10 @@ cart[idstr] = 1;
 console.log(cart);
 localStorage.setItem('cart', JSON.stringify(cart));
 document.getElementById('cart').innerHTML = Object.keys(cart).length;
+
+
 });
+
+
+$('#popcart').popover();
+document.getElementById("popcart").setAttribute('data-content', 'Cart for your items in my shopping cart');
