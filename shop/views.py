@@ -5,20 +5,32 @@ from math import ceil
 
 
 def index(request):
-    products = Product.objects.all()
+    # products = Product.objects.all()
 
-    num = len(products)
-    num_slide = num//4 + ceil(num/4 - num//4)
+    # num = len(products)
+    # num_slide = num//4 + ceil(num/4 - num//4)
 
-    all_products = [
-        [products, range(1, num_slide), num_slide ],
-        [products, range(1, num_slide), num_slide],
+    # all_products = [
+    #     [products, range(1, num_slide), num_slide ],
+    #     [products, range(1, num_slide), num_slide],
 
-    ]
+    # ]
+
+    all_products = []
+    products_category = Product.objects.values('category', 'id')
+    categories = {item["category"] for item in products_category }
+    for cat in categories:
+        products = Product.objects.filter(category=cat)
+        num = len(products)
+        num_slide = num//4 + ceil(num/4 - num//4)
+        all_products.append([products, range(1, num_slide), num_slide])
+
     context = {
         "all_products":all_products,
         
     }
+
+
     return render(request, 'shop/shop_index.html', context)
 
 

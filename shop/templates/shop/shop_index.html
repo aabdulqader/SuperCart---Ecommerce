@@ -8,8 +8,8 @@
 
         <!--carousel indicators starts from here-->
         {% for product, range, num_slide in all_products %}
-        <h1>Laptop</h1>
-        <div id="demo{{forloop.counter}}" class="carousel slide my-3" data-ride="carousel">'
+        <h1 class="my-5">{{product.0.category}}</h1>
+        <div id="demo{{forloop.counter}}" class="carousel slide my-3" data-ride="carousel">
             <ul class="carousel-indicators">
                 <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
                 
@@ -29,7 +29,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{product.0.product_name}}</h5>
                                 <p class="card-text">{{product.0.product_desc | slice:200}}</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <button id="{{product.0.id}}" class="btn btn-primary cart">Add To Cart</button>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{item.product_name}}</h5>
                                 <p class="card-text">{{item.product_desc | slice:200}}</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <button id= "pr{{i.id}}"class="btn btn-primary cart">Add To Cart</button>
                             </div>
                         </div>
                     </div>
