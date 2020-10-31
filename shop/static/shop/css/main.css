@@ -53,3 +53,8 @@ padding-right: 0;
     background-color: rgba(12, 49, 49, 0.884) !important;
     padding: 2% !important;
 }
+
+
+.base_content {
+    padding-top: 70px;
+}

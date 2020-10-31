@@ -50,8 +50,12 @@ def search(request):
 
 
 
-def productview(request):
-    return render(request, 'shop/shop_productview.html')
+def productview(request, p_id):
+    product = Product.objects.filter(id=p_id)
+    context = {
+        'product':product[0]
+    }
+    return render(request, 'shop/shop_productview.html', context)
 
 
 

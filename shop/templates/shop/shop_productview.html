@@ -1,6 +1,29 @@
 {% extends 'base.html' %}
+{% block title %} {{product.product_name}} - Supercart{% endblock title%}
 {% block content %}
 
-    <h1>Shop Prosduct page..</h1>
+    <div class="container base_content">
+
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <img src="{{product.image.url}}" width="233px" height="385px">
+                        <button class="btn btn-primary mx-2 "> Buy Now</button>
+                        <br>
+                        <button class="btn btn-primary mx-2 "> Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h5>{{product.product_name}}</h5>
+                    <p><b><strong>Price : </strong> {{product.price}}$</b></p>
+                    <p>{{product.product_desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            
+        </div>  
 
 {% endblock content %}
