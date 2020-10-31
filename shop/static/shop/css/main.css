@@ -12,7 +12,7 @@ background-color: blue;
 
 
 .col-md-3 img{
-    width: 227px;
+    max-width: 227px;
     max-height: 242px;
 }
 

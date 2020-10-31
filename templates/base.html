@@ -42,6 +42,9 @@
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart(<span id="cart">0</span>)</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
@@ -68,39 +71,20 @@
 
 
     <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+    <script src="{% static 'shop\js\main.js' %}"></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper.js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper.js and Bootstrap JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
-  <script>
-  console.log('working')
-    if(localStorage.getItem('cart') == null)
-    {
-    var cart={};
-    }
-    else{
-    cart= JSON.parse(localstorage.getItem('cart'));
-    }
 
-    //jQuery starts here//
-    $('.cart').click(function(){
 
-    console.log('clicked');
-    var idStr= this.id.toString();
-    console.log(idStr);
-    if(cart[idstr]!= undefined) {
-    cart[idstr] = cart[idstr]+1;
-    }
-    else{
-    cart[idstr] = 1;
-    }
-    console.log(cart);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    });
-
-  </script>
   </body>
 </html>
