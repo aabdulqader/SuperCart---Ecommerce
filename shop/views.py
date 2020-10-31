@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Product
 from math import ceil
+from .models import Product, Contact
 
 
 
@@ -35,12 +35,20 @@ def index(request):
 
 
 
-def about(request):
+def about(request):     
     return render(request, 'shop/shop_about.html')
 
 
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        phone = request.POST["phone"]
+        subject = request.POST["subject"]
+        message = request.POST["message"]
+        instance = Contact(name=name, email=email, phone=phone, subject=subject, message=message )
+        instance.save()
     return render(request, 'shop/shop_contact.html')
 
 
