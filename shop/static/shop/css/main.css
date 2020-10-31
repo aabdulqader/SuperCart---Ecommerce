@@ -1,0 +1,52 @@
+
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
+}
+
+
+.carousel-indicators .active {
+background-color: blue;
+}
+
+
+.col-md-3 img{
+    width: 227px;
+    max-height: 242px;
+}
+
+
+body .carousel-indicator li{
+background-color: blue;
+}
+
+
+body .carousel-indicators{
+bottom: 0;
+}
+
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: rgb(5, 131, 104);
+}
+
+
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+bottom: auto;
+}
+
+
+
+body .no-padding{
+padding-left: 0,
+padding-right: 0;
+}
+
+.navbar {
+    background-color: rgba(12, 49, 49, 0.884) !important;
+    padding: 2% !important;
+}
